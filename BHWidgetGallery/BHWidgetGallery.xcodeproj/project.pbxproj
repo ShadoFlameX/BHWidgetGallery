@@ -20,6 +20,10 @@
 		0D7D329A174F128000C6CA54 /* BHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D3299174F128000C6CA54 /* BHDetailViewController.m */; };
 		0D7D329D174F128000C6CA54 /* BHMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7D329B174F128000C6CA54 /* BHMasterViewController.xib */; };
 		0D7D32A0174F128000C6CA54 /* BHDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7D329E174F128000C6CA54 /* BHDetailViewController.xib */; };
+		0D7D32A9174F12C300C6CA54 /* BHFlipControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D32A8174F12C300C6CA54 /* BHFlipControl.m */; };
+		0DC29734174F245300C21D8F /* flip-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC29731174F245300C21D8F /* flip-back.png */; };
+		0DC29735174F245300C21D8F /* flip-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC29732174F245300C21D8F /* flip-background.png */; };
+		0DC29736174F245300C21D8F /* flip-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC29733174F245300C21D8F /* flip-front.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,11 @@
 		0D7D3299174F128000C6CA54 /* BHDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHDetailViewController.m; sourceTree = "<group>"; };
 		0D7D329C174F128000C6CA54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BHMasterViewController.xib; sourceTree = "<group>"; };
 		0D7D329F174F128000C6CA54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BHDetailViewController.xib; sourceTree = "<group>"; };
+		0D7D32A7174F12C300C6CA54 /* BHFlipControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHFlipControl.h; sourceTree = "<group>"; };
+		0D7D32A8174F12C300C6CA54 /* BHFlipControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHFlipControl.m; sourceTree = "<group>"; };
+		0DC29731174F245300C21D8F /* flip-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-back.png"; path = "Images/flip-back.png"; sourceTree = "<group>"; };
+		0DC29732174F245300C21D8F /* flip-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-background.png"; path = "Images/flip-background.png"; sourceTree = "<group>"; };
+		0DC29733174F245300C21D8F /* flip-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-front.png"; path = "Images/flip-front.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +97,7 @@
 		0D7D3283174F128000C6CA54 /* BHWidgetGallery */ = {
 			isa = PBXGroup;
 			children = (
+				0D7D32A6174F12A500C6CA54 /* Buttons */,
 				0D7D328C174F128000C6CA54 /* BHAppDelegate.h */,
 				0D7D328D174F128000C6CA54 /* BHAppDelegate.m */,
 				0D7D3295174F128000C6CA54 /* BHMasterViewController.h */,
@@ -104,6 +114,7 @@
 		0D7D3284174F128000C6CA54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0DC29730174F1A9C00C21D8F /* Images */,
 				0D7D3285174F128000C6CA54 /* BHWidgetGallery-Info.plist */,
 				0D7D3286174F128000C6CA54 /* InfoPlist.strings */,
 				0D7D3289174F128000C6CA54 /* main.m */,
@@ -113,6 +124,25 @@
 				0D7D3293174F128000C6CA54 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D7D32A6174F12A500C6CA54 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0D7D32A7174F12C300C6CA54 /* BHFlipControl.h */,
+				0D7D32A8174F12C300C6CA54 /* BHFlipControl.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		0DC29730174F1A9C00C21D8F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0DC29731174F245300C21D8F /* flip-back.png */,
+				0DC29732174F245300C21D8F /* flip-background.png */,
+				0DC29733174F245300C21D8F /* flip-front.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +203,9 @@
 				0D7D3294174F128000C6CA54 /* Default-568h@2x.png in Resources */,
 				0D7D329D174F128000C6CA54 /* BHMasterViewController.xib in Resources */,
 				0D7D32A0174F128000C6CA54 /* BHDetailViewController.xib in Resources */,
+				0DC29734174F245300C21D8F /* flip-back.png in Resources */,
+				0DC29735174F245300C21D8F /* flip-background.png in Resources */,
+				0DC29736174F245300C21D8F /* flip-front.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +220,7 @@
 				0D7D328E174F128000C6CA54 /* BHAppDelegate.m in Sources */,
 				0D7D3297174F128000C6CA54 /* BHMasterViewController.m in Sources */,
 				0D7D329A174F128000C6CA54 /* BHDetailViewController.m in Sources */,
+				0D7D32A9174F12C300C6CA54 /* BHFlipControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +351,7 @@
 				0D7D32A5174F128000C6CA54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

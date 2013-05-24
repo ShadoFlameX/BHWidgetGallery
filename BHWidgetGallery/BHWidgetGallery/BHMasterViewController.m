@@ -7,11 +7,12 @@
 //
 
 #import "BHMasterViewController.h"
-
 #import "BHDetailViewController.h"
+#import "BHFlipControl.h"
 
 @interface BHMasterViewController () {
     NSMutableArray *_objects;
+    BHFlipControl *_flipControl;
 }
 @end
 
@@ -29,17 +30,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+
+    _flipControl = [[BHFlipControl alloc] initWithFrontImage:[UIImage imageNamed:@"flip-front"] backImage:[UIImage imageNamed:@"flip-back"]];
+    [_flipControl addTarget:self action:@selector(toggleFlipButton:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_flipControl];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)insertNewObject:(id)sender
@@ -51,6 +52,15 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+
+
+#pragma mark - Actions
+
+- (void)toggleFlipButton:(id)sender
+{
+    [_flipControl setShowFront:!_flipControl.showFront animated:YES];
+}
+
 
 #pragma mark - Table View
 
