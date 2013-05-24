@@ -20,6 +20,11 @@ static CGFloat const DefaultDuration = 0.65f;
 
 #pragma mark - Properties
 
+- (void)setShowFront:(BOOL)showFront
+{
+    [self setShowFront:showFront animated:NO];
+}
+
 - (void)setShowFront:(BOOL)showFront animated:(BOOL)animated
 {
     [self setShowFront:showFront animated:animated duration:DefaultDuration];
