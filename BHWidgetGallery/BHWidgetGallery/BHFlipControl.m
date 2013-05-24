@@ -42,12 +42,17 @@ static CGFloat const DefaultDuration = 0.65f;
     UIView *fromView = _showFront ? _backView : _frontView;
     UIView *toView = _showFront ? _frontView : _backView;
 
-    CGFloat dur = animated ? duration : 0.0f;
-    UIViewAnimationOptions flipOption = _showFront ?
-                                        UIViewAnimationOptionTransitionFlipFromLeft :
-                                        UIViewAnimationOptionTransitionFlipFromRight;
+    if (animated) {
+        UIViewAnimationOptions flipOption = _showFront ?
+                                            UIViewAnimationOptionTransitionFlipFromLeft :
+                                            UIViewAnimationOptionTransitionFlipFromRight;
 
-    [UIView transitionFromView:fromView toView:toView duration:dur options:flipOption completion:nil];
+        [UIView transitionFromView:fromView toView:toView duration:duration options:flipOption completion:nil];
+
+    } else {
+        [fromView removeFromSuperview];
+        [_container addSubview:toView];
+    }
 }
 
 
