@@ -1,5 +1,5 @@
 //
-//  UIViewController+LoadingView.h
+//  UIViewController+BHLoadingView.h
 //  BHWidgetGallery
 //
 //  Created by Bryan Hansen on 5/29/13.
@@ -10,7 +10,7 @@
 
 @class BHLoadingView;
 
-@interface UIViewController (LoadingView)
+@interface UIViewController (BHLoadingView)
 
 @property (assign, nonatomic, setter = bh_setLoading:) BOOL bh_loading;
 

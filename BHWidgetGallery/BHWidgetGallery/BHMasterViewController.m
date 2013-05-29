@@ -9,7 +9,7 @@
 #import "BHMasterViewController.h"
 #import "BHDetailViewController.h"
 #import "BHFlipControl.h"
-#import "UIViewController+LoadingView.h"
+#import "UIViewController+BHLoadingView.h"
 
 @interface BHMasterViewController () {
     NSMutableArray *_objects;

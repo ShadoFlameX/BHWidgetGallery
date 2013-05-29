@@ -1,12 +1,12 @@
 //
-//  UIViewController+LoadingView.m
+//  UIViewController+BHLoadingView.m
 //  BHWidgetGallery
 //
 //  Created by Bryan Hansen on 5/29/13.
 //  Copyright (c) 2013 skeuo. All rights reserved.
 //
 
-#import "UIViewController+LoadingView.h"
+#import "UIViewController+BHLoadingView.h"
 #import "BHLoadingView.h"
 #import "BHGeometry.h"
 #import <objc/runtime.h>
@@ -17,13 +17,13 @@ static char BHLoadingViewKey;
 static CGFloat const ShowDuration = 0.2f;
 static CGFloat const HideDuration = 0.15f;
 
-@interface UIViewController (LoadingViewPrivate)
+@interface UIViewController (BHLoadingViewPrivate)
 
 @property (assign, nonatomic, setter = bh_setLoadingView:) BHLoadingView *bh_loadingView;
 
 @end
 
-@implementation UIViewController (LoadingView)
+@implementation UIViewController (BHLoadingView)
 
 - (BOOL)bh_loading
 {
@@ -76,6 +76,9 @@ static CGFloat const HideDuration = 0.15f;
         }
     }
 }
+
+
+#pragma mark - Private
 
 - (BHLoadingView *)bh_loadingView
 {
