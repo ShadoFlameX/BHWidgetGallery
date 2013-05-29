@@ -8,7 +8,7 @@
 
 #import "BHFlipControl.h"
 
-static CGFloat const DefaultDuration = 0.65f;
+static CGFloat const DefaultDuration = 0.75f;
 
 @interface BHFlipControl () {
     UIView *_container;
