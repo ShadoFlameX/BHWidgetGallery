@@ -24,6 +24,8 @@
 		0DC29734174F245300C21D8F /* flip-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC29731174F245300C21D8F /* flip-back.png */; };
 		0DC29735174F245300C21D8F /* flip-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC29732174F245300C21D8F /* flip-background.png */; };
 		0DC29736174F245300C21D8F /* flip-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC29733174F245300C21D8F /* flip-front.png */; };
+		0DDB07641756A28100829170 /* UIViewController+LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB07631756A28100829170 /* UIViewController+LoadingView.m */; };
+		0DDB07681756A2B000829170 /* BHLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB07671756A2B000829170 /* BHLoadingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,11 @@
 		0DC29731174F245300C21D8F /* flip-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-back.png"; path = "Images/flip-back.png"; sourceTree = "<group>"; };
 		0DC29732174F245300C21D8F /* flip-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-background.png"; path = "Images/flip-background.png"; sourceTree = "<group>"; };
 		0DC29733174F245300C21D8F /* flip-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-front.png"; path = "Images/flip-front.png"; sourceTree = "<group>"; };
+		0DDB07621756A28100829170 /* UIViewController+LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingView.h"; sourceTree = "<group>"; };
+		0DDB07631756A28100829170 /* UIViewController+LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingView.m"; sourceTree = "<group>"; };
+		0DDB07661756A2B000829170 /* BHLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHLoadingView.h; sourceTree = "<group>"; };
+		0DDB07671756A2B000829170 /* BHLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHLoadingView.m; sourceTree = "<group>"; };
+		0DDB07691756AFAA00829170 /* BHGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHGeometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +104,8 @@
 		0D7D3283174F128000C6CA54 /* BHWidgetGallery */ = {
 			isa = PBXGroup;
 			children = (
+				0DDB07651756A28F00829170 /* Views */,
+				0DDB07611756A26700829170 /* Extensions */,
 				0D7D32A6174F12A500C6CA54 /* Buttons */,
 				0D7D328C174F128000C6CA54 /* BHAppDelegate.h */,
 				0D7D328D174F128000C6CA54 /* BHAppDelegate.m */,
@@ -143,6 +152,25 @@
 				0DC29733174F245300C21D8F /* flip-front.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		0DDB07611756A26700829170 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB07621756A28100829170 /* UIViewController+LoadingView.h */,
+				0DDB07631756A28100829170 /* UIViewController+LoadingView.m */,
+				0DDB07691756AFAA00829170 /* BHGeometry.h */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0DDB07651756A28F00829170 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB07661756A2B000829170 /* BHLoadingView.h */,
+				0DDB07671756A2B000829170 /* BHLoadingView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +249,8 @@
 				0D7D3297174F128000C6CA54 /* BHMasterViewController.m in Sources */,
 				0D7D329A174F128000C6CA54 /* BHDetailViewController.m in Sources */,
 				0D7D32A9174F12C300C6CA54 /* BHFlipControl.m in Sources */,
+				0DDB07641756A28100829170 /* UIViewController+LoadingView.m in Sources */,
+				0DDB07681756A2B000829170 /* BHLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

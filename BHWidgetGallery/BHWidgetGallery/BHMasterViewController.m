@@ -9,6 +9,7 @@
 #import "BHMasterViewController.h"
 #import "BHDetailViewController.h"
 #import "BHFlipControl.h"
+#import "UIViewController+LoadingView.h"
 
 @interface BHMasterViewController () {
     NSMutableArray *_objects;
@@ -59,8 +60,21 @@
 - (void)toggleFlipButton:(id)sender
 {
     [_flipControl setShowFront:!_flipControl.showFront animated:YES];
+
+    [self showLoading];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideLoading) object:nil];
+    [self performSelector:@selector(hideLoading) withObject:nil afterDelay:2.0f];
 }
 
+- (void)showLoading
+{
+    [self bh_setLoading:YES animated:YES];
+}
+
+- (void)hideLoading
+{
+    [self bh_setLoading:NO animated:YES];
+}
 
 #pragma mark - Table View
 
