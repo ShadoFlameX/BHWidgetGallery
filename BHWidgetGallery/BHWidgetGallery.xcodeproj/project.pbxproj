@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D59D37F1757253C00CE23EB /* BHTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D59D37E1757253C00CE23EB /* BHTextFieldCell.m */; };
 		0D7D327E174F128000C6CA54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7D327D174F128000C6CA54 /* UIKit.framework */; };
 		0D7D3280174F128000C6CA54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7D327F174F128000C6CA54 /* Foundation.framework */; };
 		0D7D3282174F128000C6CA54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7D3281174F128000C6CA54 /* CoreGraphics.framework */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D59D37D1757253C00CE23EB /* BHTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTextFieldCell.h; sourceTree = "<group>"; };
+		0D59D37E1757253C00CE23EB /* BHTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTextFieldCell.m; sourceTree = "<group>"; };
 		0D7D327A174F128000C6CA54 /* BHWidgetGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHWidgetGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7D327D174F128000C6CA54 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0D7D327F174F128000C6CA54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +77,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D59D37C1757252200CE23EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D59D37D1757253C00CE23EB /* BHTextFieldCell.h */,
+				0D59D37E1757253C00CE23EB /* BHTextFieldCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0D59D3801757272900CE23EB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D7D3295174F128000C6CA54 /* BHMasterViewController.h */,
+				0D7D3296174F128000C6CA54 /* BHMasterViewController.m */,
+				0D7D329B174F128000C6CA54 /* BHMasterViewController.xib */,
+				0D7D3298174F128000C6CA54 /* BHDetailViewController.h */,
+				0D7D3299174F128000C6CA54 /* BHDetailViewController.m */,
+				0D7D329E174F128000C6CA54 /* BHDetailViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		0D7D3271174F128000C6CA54 = {
 			isa = PBXGroup;
 			children = (
@@ -104,17 +129,12 @@
 		0D7D3283174F128000C6CA54 /* BHWidgetGallery */ = {
 			isa = PBXGroup;
 			children = (
+				0D59D3801757272900CE23EB /* View Controllers */,
 				0DDB07651756A28F00829170 /* Views */,
 				0DDB07611756A26700829170 /* Extensions */,
 				0D7D32A6174F12A500C6CA54 /* Buttons */,
 				0D7D328C174F128000C6CA54 /* BHAppDelegate.h */,
 				0D7D328D174F128000C6CA54 /* BHAppDelegate.m */,
-				0D7D3295174F128000C6CA54 /* BHMasterViewController.h */,
-				0D7D3296174F128000C6CA54 /* BHMasterViewController.m */,
-				0D7D3298174F128000C6CA54 /* BHDetailViewController.h */,
-				0D7D3299174F128000C6CA54 /* BHDetailViewController.m */,
-				0D7D329B174F128000C6CA54 /* BHMasterViewController.xib */,
-				0D7D329E174F128000C6CA54 /* BHDetailViewController.xib */,
 				0D7D3284174F128000C6CA54 /* Supporting Files */,
 			);
 			path = BHWidgetGallery;
@@ -167,6 +187,7 @@
 		0DDB07651756A28F00829170 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D59D37C1757252200CE23EB /* Cells */,
 				0DDB07661756A2B000829170 /* BHLoadingView.h */,
 				0DDB07671756A2B000829170 /* BHLoadingView.m */,
 			);
@@ -251,6 +272,7 @@
 				0D7D32A9174F12C300C6CA54 /* BHFlipControl.m in Sources */,
 				0DDB07641756A28100829170 /* UIViewController+BHLoadingView.m in Sources */,
 				0DDB07681756A2B000829170 /* BHLoadingView.m in Sources */,
+				0D59D37F1757253C00CE23EB /* BHTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
