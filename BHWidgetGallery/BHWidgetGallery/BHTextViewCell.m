@@ -43,11 +43,12 @@
 - (CGFloat)height
 {
     CGFloat width = self.contentView.bounds.size.width - self.contentInsets.left - self.contentInsets.right;
-
-    // per Apple, cell heights should not be greater than 2009, reducing to account for insets
     CGSize size = CGSizeMake(width, 1960.0f);
 
-    return [self.textView sizeThatFits:size].height;
+    CGFloat height = [self.textView sizeThatFits:size].height + self.contentInsets.top + self.contentInsets.bottom;
+    NSAssert(height < 2009.0f, @"Apple recommends cell height be less than 2009");
+
+    return height;
 }
 
 @end
