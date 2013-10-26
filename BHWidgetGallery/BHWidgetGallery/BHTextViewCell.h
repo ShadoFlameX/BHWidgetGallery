@@ -10,4 +10,9 @@
 
 @interface BHTextViewCell : UITableViewCell
 
+@property (strong, nonatomic, readonly) UITextView *textView;
+@property (assign, nonatomic) UIEdgeInsets contentInsets;
+
+- (CGFloat)height;
+
 @end

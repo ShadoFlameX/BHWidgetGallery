@@ -10,20 +10,44 @@
 
 @implementation BHTextViewCell
 
+#pragma mark - Alloc/Init
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        _textView = [[UITextView alloc] init];
+
+        [self.contentView addSubview:_textView];
     }
+
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (void)layoutSubviews
 {
-    [super setSelected:selected animated:animated];
+    [super layoutSubviews];
 
-    // Configure the view for the selected state
+    self.textView.frame = UIEdgeInsetsInsetRect(self.contentView.bounds, self.contentInsets);
+}
+
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+
+    self.textView.text = nil;
+}
+
+- (CGFloat)height
+{
+    CGFloat width = self.contentView.bounds.size.width - self.contentInsets.left - self.contentInsets.right;
+
+    // per Apple, cell heights should not be greater than 2009, reducing to account for insets
+    CGSize size = CGSizeMake(width, 1960.0f);
+
+    return [self.textView sizeThatFits:size].height;
 }
 
 @end
