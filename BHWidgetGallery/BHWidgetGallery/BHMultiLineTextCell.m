@@ -46,9 +46,9 @@
     CGFloat width = self.contentView.bounds.size.width - self.contentInsets.left - self.contentInsets.right;
     CGSize size = CGSizeMake(width, 10000.0f);
 
-    // for some reason height is just slightly too small
+    // for some reason height is just slightly too small, so add 1pt
     CGFloat height = [self.textLabel sizeThatFits:size].height + self.contentInsets.top + self.contentInsets.bottom + 1.0f;
-    NSAssert(height < 2009.0f, @"Apple recommends cell height be less than 2009");
+    NSAssert(height < 2009.0f, @"Cell height is larger than Apple's recommended max");
     height = MIN(2008.0f, height);
 
     return height;
