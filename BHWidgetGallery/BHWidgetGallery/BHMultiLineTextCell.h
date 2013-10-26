@@ -1,5 +1,5 @@
 //
-//  BHTextViewCell.h
+//  BHMultiLineTextCell.h
 //  BHWidgetGallery
 //
 //  Created by Bryan Hansen on 10/25/13.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BHTextViewCell : UITableViewCell
+@interface BHMultiLineTextCell : UITableViewCell
 
-@property (strong, nonatomic, readonly) UITextView *textView;
 @property (assign, nonatomic) UIEdgeInsets contentInsets;
 
 - (CGFloat)height;
