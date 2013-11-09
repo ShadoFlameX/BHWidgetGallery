@@ -11,6 +11,5 @@
 @interface BHTextFieldCell : UITableViewCell
 
 @property (strong, nonatomic, readonly) UITextField *textField;
-@property (assign, nonatomic) CGFloat textLabelWidth;
 
 @end

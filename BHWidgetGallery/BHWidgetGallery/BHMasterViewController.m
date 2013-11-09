@@ -89,7 +89,6 @@ static NSString * const TextFieldCellIdentifier = @"TextFieldCell";
         BHTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:TextFieldCellIdentifier];
 
         cell.textLabel.text = @"Phone";
-        cell.textLabelWidth = 64.0f;
         cell.textField.placeholder = @"(###) ###-####";
 
         return cell;

@@ -15,11 +15,12 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+
         _textField = [[UITextField alloc] init];
-        _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 
         [self.contentView addSubview:_textField];
+
+        [_textField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
 }
@@ -27,7 +28,6 @@
 - (void)prepareForReuse
 {
     [super prepareForReuse];
-    _textLabelWidth = 0.0f;
 }
 
 - (void)layoutSubviews
@@ -36,14 +36,26 @@
 
     CGRect bounds, titleFrame, textFrame;
 
-    bounds = CGRectInset(self.contentView.bounds, 10.0f, 0.0f);
-    
-    CGFloat paddingX = _textLabelWidth ? 8.0f : 0.0f;
-    CGRectDivide(bounds, &titleFrame, &textFrame, _textLabelWidth + paddingX, CGRectMinXEdge);
+    bounds = CGRectInset(self.contentView.bounds, 15.0f, 0.0f);
+
+    CGFloat width = [self.textLabel sizeThatFits:bounds.size].width;
+
+    CGFloat paddingX = width > 0.0f ? 8.0f : 0.0f;
+    CGRectDivide(bounds, &titleFrame, &textFrame, width + paddingX, CGRectMinXEdge);
     titleFrame.size.width -= paddingX;
 
     self.textLabel.frame = titleFrame;
     self.textField.frame = textFrame;
+}
+
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == self.textField && [keyPath isEqualToString:@"text"]) {
+        [self setNeedsLayout];
+    }
 }
 
 @end
