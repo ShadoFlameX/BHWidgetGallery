@@ -25,9 +25,9 @@
     return self;
 }
 
-- (void)prepareForReuse
+- (void)dealloc
 {
-    [super prepareForReuse];
+    [self.textField removeObserver:self forKeyPath:@"text"];
 }
 
 - (void)layoutSubviews
